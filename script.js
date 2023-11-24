@@ -10,8 +10,7 @@ function searchBtn() {
 }
 const getimages = async () => {
      let searchImages = document.getElementById("input").value
-
-     // document.getElementById("input").value = ''
+     document.getElementById("input").value = ''
      let url = `https://api.pexels.com/v1/search?query=${searchImages}&page=${currentpage}&per_page=${perpage}`
      await fetch(url, {
           headers: { Authorization: apikey }
